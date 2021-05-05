@@ -69,6 +69,18 @@ ul > li:hover {
 margin-left: 30px;  
 margin-top: -1px;
 border-bottom: 1px solid #e9204f;
+color: white;
+}
+
+.fa-search {
+	color:white;
+}
+
+
+.noUnderline:hover {
+	border-bottom: 0px;
+	cursor: pointer;
+	color: white;
 }
 
 #caja {   

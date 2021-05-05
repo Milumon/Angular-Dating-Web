@@ -10,13 +10,15 @@ import { ServiciosComponent } from './inicio/servicios/servicios.component';
 import { EmpresaComponent } from './inicio/empresa/empresa.component';
 import { LogrosComponent } from './inicio/logros/logros.component';
 import { PartnersComponent } from './inicio/partners/partners.component';
-import { ProductosComponent } from './inicio/productos/productos.component';
 import { LocationComponent } from './inicio/location/location.component';
 import { VideoComponent } from './inicio/video/video.component';
 import { MainHeadComponent } from './common/main-head/main-head.component';
 import { InformationComponent } from './inicio/information/information.component';
 import { PersonalComponent } from './inicio/personal/personal.component';
 import { HomeComponent } from './inicio/home/home.component';
+import { ColaboradoresComponent } from './components/colaboradores/colaboradores.component';
+import { ProductosComponent } from './components/productos/productos.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { HomeComponent } from './inicio/home/home.component';
     MainHeadComponent,
     InformationComponent,
     PersonalComponent,
-    HomeComponent
+    HomeComponent,
+    ColaboradoresComponent
   ],
   imports: [
     BrowserModule,

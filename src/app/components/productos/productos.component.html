@@ -1,0 +1,49 @@
+<section id="productos" class="padded">
+  <div class="container">
+    <h2>Productos adicionales</h2>
+    <div class="divisor"></div>
+    <h1>{{frase}}</h1>
+    <div class="row">
+      <div class="col-md-12">
+ 
+        <div class="tab-content" id="myTabContent"> 
+
+          <div class="tab-pane fade show active" id="tproductos" role="tabpanel" aria-labelledby="home-tab">
+            <div class="container">  
+              <div class="row">
+                <div class="col-md-8">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th> 
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let producto of productos" (click)="seleccionar(producto)"
+                        [class.fila-seleccionada]="producto === productoElegido">
+                        <td>{{producto.id}}</td>
+                        <td>{{producto.nombre}}</td>
+                        <td>{{producto.descripcion}}</td>
+                        <td>S/{{producto.precio}}</td>
+                      </tr>
+                    </tbody>
+                  </table> 
+                </div>
+                <div class="col-md-4" *ngIf="productoElegido">
+                  <img src={{productoElegido.foto}} class="img-fluid" alt={{productoElegido.nombre}} /> 
+                  <h4>{{productoElegido.nombre}}</h4>
+                  <p>{{productoElegido.descripcion}}<br>
+                   Precio: S/{{productoElegido.precio}}</p>
+                </div>
+              </div>
+            </div>
+          </div> <!-- lista -->
+
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
