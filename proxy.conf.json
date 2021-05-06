@@ -1,0 +1,9 @@
+{
+    "/MicroservicioNoticias/*": {
+      "target": "https://www.munisantanita.gob.pe",
+      "secure": false,
+      "changeOrigin": true
+    }
+  } 
+
+  

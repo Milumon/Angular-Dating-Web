@@ -9,7 +9,7 @@ export class NoticiasService {
   constructor(private http: HttpClient) { }
 
   noticiasSelect(){
-    const ruta = "https://www.munisantanita.gob.pe/MicroservicioNoticias/noticia";
+    const ruta = "/MicroservicioNoticias/noticia";
     return this.http.get(ruta);
   }
 
