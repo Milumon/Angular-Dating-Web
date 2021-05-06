@@ -1,0 +1,21 @@
+<section id="productos" class="padded">
+    <div class="container">
+      <h2>Noticias</h2>
+      <div class="divisor"></div>
+      <h1>  </h1>
+      <div class="row">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col"  *ngFor="let filanoticia of listaNoticias">
+              <div class="card">
+                <img src="https://www.munisantanita.gob.pe/data/web/noticias/galeria//{{filanoticia.imagen}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    {{filanoticia.titulo}}</h5>
+                   <p class="card-text">Fecha: {{filanoticia.fecha}}</p>
+                </div>
+              </div>
+            </div>
+        </div>    
+      </div>
+    </div>
+  </section> 

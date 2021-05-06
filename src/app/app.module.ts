@@ -16,8 +16,10 @@ import { MainHeadComponent } from './common/main-head/main-head.component';
 import { InformationComponent } from './inicio/information/information.component';
 import { PersonalComponent } from './inicio/personal/personal.component';
 import { HomeComponent } from './inicio/home/home.component';
-import { ColaboradoresComponent } from './components/colaboradores/colaboradores.component';
 import { ProductosComponent } from './components/productos/productos.component';
+import { NoticiasComponent } from './components/noticias/noticias.component';
+import { ColaboradoresComponent } from './components/colaboradores/colaboradores.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -37,11 +39,14 @@ import { ProductosComponent } from './components/productos/productos.component';
     InformationComponent,
     PersonalComponent,
     HomeComponent,
-    ColaboradoresComponent
+    NoticiasComponent,
+    ColaboradoresComponent, 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
