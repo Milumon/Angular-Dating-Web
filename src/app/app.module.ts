@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';  
+import { FilterPipeModule } from 'ngx-filter-pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OrderModule } from 'ngx-order-pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +24,8 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { NoticiasComponent } from './components/noticias/noticias.component';
 import { ColaboradoresComponent } from './components/colaboradores/colaboradores.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TiendaComponent } from './components/tienda/tienda.component';
+import { ProductoDetalleComponent } from './components/producto-detalle/producto-detalle.component';
 
 
 @NgModule({
@@ -40,13 +46,19 @@ import { HttpClientModule } from '@angular/common/http';
     PersonalComponent,
     HomeComponent,
     NoticiasComponent,
-    ColaboradoresComponent, 
+    ColaboradoresComponent,
+    TiendaComponent,
+    ProductoDetalleComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-
+    HttpClientModule,
+    FilterPipeModule,
+    FormsModule, 
+    ReactiveFormsModule,
+    OrderModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

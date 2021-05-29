@@ -13,6 +13,7 @@ export class NoticiasComponent implements OnInit {
   constructor(private NoticiasService: NoticiasService) { }
 
   ngOnInit(): void {
+
     this.NoticiasService.noticiasSelect().subscribe(
       (res: Noticia[]) => {
         console.log(res);
@@ -20,6 +21,7 @@ export class NoticiasComponent implements OnInit {
         this.listaNoticias = res['noticias'];
        }
     )
+    
   }
 
 
