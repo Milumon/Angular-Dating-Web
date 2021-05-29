@@ -1,0 +1,28 @@
+<section id="producto-detalle" class="padded">
+    <div class="container" *ngIf="producto">
+        <h2>{{producto.name}}</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <p>Capital: {{producto.capital}}</p>
+                <p>Población: {{producto.population}}</p>
+            </div>
+            <div class="col-md-3">
+                <h5>Otras denominaciones</h5>
+                <p *ngFor="let denominacion of producto.altSpellings">
+                    {{denominacion}}
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h5>Bloques regiones</h5>
+                
+                <p *ngFor="let bloque of producto.regionalBlocs" >
+                    <strong>{{bloque.acronym}}</strong> - {{bloque.name}} 
+                </p>
+                
+            </div>
+            <div class="col-md-3">
+                <img src={{producto.flag}} class="img-fluid" alt={{producto.name}}>
+            </div>
+        </div>
+    </div>
+</section>
